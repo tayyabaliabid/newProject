@@ -1,5 +1,6 @@
  @extends('user.layouts.master')
  @section('content')
+
  <div class="page-header">
    <div class="row align-items-end">
      <div class="col-lg-8">
@@ -107,11 +108,12 @@
      </div>
    </div>
  </div>
+
  @endsection
- @section('js-script') 
+ @section('js-script')
  <script>
-   $(document).ready(function(){
-    var type = $('#type').val();
+   $(document).ready(function() {
+     var type = $('#type').val();
      if (type == 'existing') {
        $('#create_new').slideUp();
        $('#existing').slideDown();
@@ -120,6 +122,7 @@
        $('#create_new').slideDown();
      }
    });
+
    function checkType() {
      var type = $('#type').val();
      if (type == 'existing') {

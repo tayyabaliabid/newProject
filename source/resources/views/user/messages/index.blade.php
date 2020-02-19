@@ -13,7 +13,7 @@
         <div class="col-lg-8">
             <div class="page-header-title">
                 <div class="d-inline">
-                    <h4>Templates</h4>
+                    <h4>Messages</h4>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <li class="breadcrumb-item">
                         <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#!">Templates</a>
+                    <li class="breadcrumb-item"><a href="#!">Messages</a>
                     </li>
                     <li class="breadcrumb-item"><a href="#!">Manage</a>
                     </li>
@@ -38,7 +38,7 @@
             @include('layouts.flash_messages')
             <div class="card">
                 <div class="card-block">
-                    <h4 class="sub-title">All Templates</h4>
+                    <h4 class="sub-title">All Messages</h4>
 
                     <div class="dt-responsive table-responsive">
                         <table id="simpletable" class="table table-striped table-bordered nowrap">
@@ -52,15 +52,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($templates as $template)
+                                @foreach($messages as $message)
                                 <tr role="row" class="odd">
                                     <td class="sorting_1">{{ ++$counter}}</td>
-                                    <td>{{ $template->name }}</td>
-                                    <td>{{ $template->body }}</td>
-                                    <td>{{ $template->created_at }}</td> 
+                                    <td>{{ $message->name }}</td>
+                                    <td>{{ $message->body }}</td>
+                                    <td>{{ $message->created_at }}</td> 
                                     <td>
-                                        <a href="{{ route('user.template.edit', $template->id) }}" title="Edit template List"><span class="feather icon-edit"></span></a> |
-                                        <a href="{{ route('user.template.destroy', $template->id) }}" title="Delete template List"><span class="feather icon-trash"></span></a>
+                                        <a href="{{ route('user.message.edit', $message->id) }}" title="Edit Message List"><span class="feather icon-edit"></span></a> |
+                                        <a href="{{ route('user.message.destroy', $message->id) }}" title="Delete Message List"><span class="feather icon-trash"></span></a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -74,7 +74,7 @@
                                 </tr>
                             </tfoot>
                         </table>
-                        {{ $templates->links() }}
+                        {{ $messages->links() }}
                     </div>
                 </div>
             </div>

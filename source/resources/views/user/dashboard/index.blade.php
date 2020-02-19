@@ -1,5 +1,18 @@
 @extends('user.layouts.master')
 @section('content')
+
+<!-- Content -->
+<div class="page-header">
+  <div class="row align-items-end">
+    <div class="col-lg-8">
+      <div class="page-header-title">
+        <div class="d-inline">
+          <h4>Dashboard</h4>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
 <div class="page-body">
   <div class="row">
     <!-- task, page, download counter  start -->
@@ -76,5 +89,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
+<!-- Content -->
+
 @endsection
